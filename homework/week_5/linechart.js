@@ -81,13 +81,10 @@ window.onload = function() {
 			d3.select("#Kuopio").on("click", function(){
 				current_data = data_1;
 			});
-			if(current_data == data_2){
-				current_data = data_2;
-			}
-			if(current_data == data_1){
+			if(i == 0){
 				current_data = data_1;
 			}
-			else{
+			if(i == 1){
 				current_data = data_2;
 			}
 			var line_upper = d3.svg.line(current_data)
@@ -186,7 +183,7 @@ window.onload = function() {
 			.attr("y1", 0)
 			.attr("y2", 0)
 			.style("font-size", "10px");
-
+	    
 		// Update crosshair and crosshairtext
 	    svg.on("mousemove", function() {
 		   	var mouse = d3.mouse(this);
@@ -205,7 +202,8 @@ window.onload = function() {
 				.attr("y1", height)
 				.attr("y2", 0)
 				.attr("stroke", "purple")
-				.text(function(d){return x_mouse(d.current_data.upper_temperature), x_mouse(d.current_data.lower_temperature), x_mouse(d.current_data.average_temperature);});
+				.text(function(d){return x_mouse(d.upper_temperature), x_mouse(d.lower_temperature), x_mouse(d.average_temperature);});
+		
     	});
 	})
 };
