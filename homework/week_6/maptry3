@@ -1,6 +1,0 @@
-// Daphne Box
-// 10455701
-
-var basic = new Datamap({
-  element: world.getElementById("basic")
-});

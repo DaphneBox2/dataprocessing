@@ -21,10 +21,11 @@ var data = d3.json("weather1998.json", function(error, data) {
 
 	chart.append("text").attr("class", "rain").style("opacity", 0)
 	var bar = chart.selectAll("g");
+	console.log(data.rain);
 	var bar_update = bar.data(data);
 	var bar_enter = bar_update.enter().append("g").attr("transform", function(d, i) { return "translate(" + (margin.left + x(d.month)) + ", 0)"; });
 	var rect = bar_enter.append("rect")
-		.attr("y", function(d) {return y(d.rain)})
+		.attr("y", function(d) {console.log(d.rain); console.log(y); console.log(y(d.rain)); return y(d.rain)})
 		.attr("height", function(d) {return height - y(d.rain);})
 		.attr("width", bar_width - 1)
 		.on("mouseover", function(d){d3.select(this).style("fill", "red"); 

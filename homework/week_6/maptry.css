@@ -1,0 +1,53 @@
+body {
+  font: arial;
+  font-size: 20px;
+  text-align: center;
+
+}
+
+p1 {
+  font-size: 12px;
+}
+
+.axis text {
+  font: 10px arial;
+  text-align: center;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.legenda {
+  fill: white;
+  font: arial;
+  font-size: 12px;
+}
+
+.chart svg {
+  font: 10px arial;
+  background-color: blue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}
+.chart rect {
+  fill: blue;
+}
+
+.chart text {
+  fill: black;
+  font: 10px arial;
+  text-anchor: end;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
