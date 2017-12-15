@@ -96,6 +96,7 @@ function make_map(year){
 		.on("click", function(){update_chart(year)});
 	}
 
+
 	make_legenda();
 }	
 
@@ -193,7 +194,7 @@ function make_chart(state, year){
 			.attr("y", (margin.top / 2))
 			.style("opacity", 1)
 			.style("font-size", "16px")
-			.text("" + state + "and" + year + "");
+			.text("" + state + " and " + year + "");
 
 		// make axis 
 		var x_axis = d3.svg.axis()
